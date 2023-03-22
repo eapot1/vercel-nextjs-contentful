@@ -198,7 +198,7 @@ export default function Index({
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getServerSideProps({ preview = false }) {
   const heroImages = (await getHeroImageForHome(preview)) ?? [];
   const textWithDotPoints = (await getTextWithDotPointsForHome(preview)) ?? [];
   const textContents = (await getTextContentsForHome(preview)) ?? [];
